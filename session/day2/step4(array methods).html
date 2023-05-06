@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    <script>
+        let init = [2, 3, 4, 5, 6, 7, 8, 9]
+        /*let total = 0;
+
+        for(let i=0; i<init.length; i++){
+            total += init[i];
+        }
+        console.log(total);*/
+
+        // Another method for array is "foreach" method
+        total = 0;
+        init.forEach(function(val, idx, arr){
+            console.log("Value found",arguments.length, val, idx, arr)
+            total += val;
+        })
+        console.log(total);
+
+        // How to double the value presnet inside the array (push) method
+
+        /*let doubleinit = [];
+        init.forEach(function(val, idx, arr){
+            doubleinit.push += val;
+        });
+        console.log(doubleinit);*/
+
+        // Another method is called (Map) method
+
+        let doubleinit = init.map((val, idx, arr) =>  val * 2);
+        console.log(doubleinit);
+
+        //Filter method
+
+        /*let greater = init.filter(function(val){
+            return val > 5;
+        })
+
+        console.log(greater);*/
+
+        let greater = 5;
+        for(i = 0; i < init.length; i++){
+         if(init[i] <= greater){
+            console.log(init[i])
+         }
+        }
+        
+    </script>
+</body>
+</html>

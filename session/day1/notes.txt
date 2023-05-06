@@ -1,0 +1,2 @@
+1. Block level element: Will occupy all the width of the parent
+2. Inline element: Will occupy the width required by its children.

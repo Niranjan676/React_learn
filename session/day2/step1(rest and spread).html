@@ -1,0 +1,62 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest and Spread Syntax</title>
+</head>
+<body>
+    <script>
+        //Rest, Spread along with Destructuring concepts
+        
+        // rest parameter(...)
+        function adder(niranjan, ...nums){
+            //return nums.length;
+            var total = 0;
+            for(i=0; i<nums.length; i++){
+                total += nums[i];
+            }
+            return niranjan + total;
+        };
+        console.log(adder("sum is ", 5));
+        console.log(adder("sum is ",5,6));
+        console.log(adder("sum is ",5,6,7));
+        console.log(adder("sum is ",5,6,7,8));
+        console.log(adder("sum is ",5,6,7,8,9));
+
+        //Spread Syntax
+        let favnum = [4, 5, 6, 7, 8, 9]
+        console.log("Sum of", favnum[0],favnum[1])
+
+        //Destructuring (cloning)
+
+        let hero = {
+            title: "Ironman",
+            power: 7,
+            city: "New Yourk",
+            firstname: "Tony",
+            lastname: "Spark"
+        }
+
+        let destructure ={ ...hero }
+        console.log(destructure.city);
+
+        //Destructuring in array method
+
+        let arrvalue = ["Niranjan", "Dhruvesh", "Saranya"]
+        //console.log(arrvalue[2]);
+
+        let firstvalue = arrvalue[0];
+        let secondvalue = arrvalue[1];
+        let thirdvalue = arrvalue[2];
+        
+        //console.log([firstvalue, secondvalue, thirdvalue]);
+
+        console.log(...arrvalue.slice(1,-1))
+
+</script>
+</body>
+</html>

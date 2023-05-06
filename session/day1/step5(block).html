@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block</title>
+</head>
+<body>
+    <script>
+        var hero = {
+            title: "batman",
+            power: 7
+        }
+
+        function changetitle(){
+            if(hero.power < 5){
+                hero.title = "batman is the dark knight";
+            }
+            else{
+                hero.title = "batman is not dark knight "
+            }
+        }
+        changetitle();
+        console.log(hero.title)
+    </script>
+</body>
+</html>

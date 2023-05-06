@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow FUnction Managing Scope</title>
+</head>
+<body>
+    <script>
+        var cart = {
+            saypower: function(){
+                return(7);
+            },
+            saygreeting: function(){
+                var booster = () =>{
+                    return this.saypower() * 10;
+                }
+                return "Hello my power is boosted to " + booster();
+            }
+        }
+        console.log(cart.saypower())
+        console.log(cart.saygreeting());
+    </script>
+</body>
+</html>
